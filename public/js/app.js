@@ -8,7 +8,7 @@ weatherForm.addEventListener('submit', (event) => {
     const location = input.value // get the search term
     weatherBox.textContent = ''
     locationBox.textContent = 'Loading results...'
-    const url = 'http://localhost:3000/weather?location=' + encodeURIComponent(location)
+    const url = '/weather?location=' + encodeURIComponent(location)
     fetch(url).then((response) => {
         
         response.json().then((data) => { // fetched json data parsed to js object
